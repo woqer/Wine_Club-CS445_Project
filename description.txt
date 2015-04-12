@@ -1,0 +1,31 @@
+I'm starting a new business, a wine club where customers can signup to receive monthly deliveries of excellent wines sourced by our wine specialists.
+
+Each delivery includes six bottles and the price for the delivery is always the same.
+
+Each customer can choose to receive all reds (AR), all whites (AW), or a mix of reds and whites (RW). The basic package is a mix of three reds and three whites.
+
+There is no cost for being a subscriber. You pay for what you receive, plus a delivery charge.
+
+Unfortunatley, the laws in the USA are such that we cannot ship to certain states. In addition, the delivery person must make sure that an adult signs for the delivery and they need to capture the first and last name of that person.
+
+Our club members should be able to preview next month's selection, it's available on the 15th of each month for the following month. Club members should be able to also see the history of past deliveries, including specific information about each wine that was included in the delivery.
+
+Each customer can add a private note to their wine delivery.
+
+One nice thing we intend to do is to allow our club members to rate wines on a scale of 10 (excellent wine) to 1 (a tad above vinegar). We'll use this information for customer service purposes and to improve the work our wine specialists do. We'll also aggregate this information from all customers who care to provide a rating in order to create a score for our wines. Customers will be able to see the wine rating when they get information about a wine.
+
+Our customers can change at any time the type of delivery they receive (AR, AW, or RW) moving forward. Or they can change only the next delivery.
+
+In addition, club members may specify what day of the week they want the delivery to be made and whether it's in the morning or afternoon. From time to time they may want to change the delivery day, just for the month or moving forward.
+
+Our delivery partner will want to use the software on a daily basis in order to get a list of customers to deliver to the next day.
+
+Club members can change the size of their delivery, e.g. skip a delivery by making the size zero, or getting more than the default which is one box that includes six bottles.
+
+When people call with a question about the service, our customer service people should be able to look them up by email address, or their last name, or by their phone number, or by their Facebook or Twitter handle. We'd like to know how much customer service the customer has generated, such as delivery cancellations, returns, bottle exchanges.
+
+From time to time we'll have to change the price of our monthly package. Also, we may have to change the delivery charge from time to time.
+
+The other thing that I need is some sense of how we're doing as a business. So, how many subscribers do we have? How many new customers did we get over the last month, three, six, nine, 12 months? How many customers have cancelled their membership over the last month, three, six, nine, 12 months, since inception? What is the cancellation rate over the last month, three, six, nine, 12 months, since inception? How much money have we made the month, last month, over the last month, three, six, nine, 12 months, since inception?
+
+That's all for now ... is this super-complicated? Can I get this by the end of April? Salud! 

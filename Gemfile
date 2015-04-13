@@ -7,3 +7,8 @@ gem 'nokogiri'
 gem 'rspec', :require => false, :group => :test
 gem 'simplecov', :require => false, :group => :test
 gem 'simplecov-csv', :require => false, :group => :test
+
+gem 'sinatra'
+gem 'thin'
+gem 'json'
+gem 'rest-client'

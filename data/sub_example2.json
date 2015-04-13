@@ -1,0 +1,13 @@
+{
+  "email": "foo@bar.com",
+  "name": "Pepito Perez",
+  "phone": "123-456-7890",
+  "address": {
+    "street": "123 Calle inventada",
+    "city": "Springfield",
+    "state": "Youneverknow",
+    "zip": "12345"
+  },
+  "facebook": "",
+  "twitter": ""   
+}

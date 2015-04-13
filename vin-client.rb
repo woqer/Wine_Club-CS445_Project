@@ -35,4 +35,9 @@ class VinClient
   def print_json
     @data.to_json
   end
+
+  def get_wines id
+    url = URI::encode("http://localhost:8080/vin/sub/345/search")
+    response = RestClient.get url.to_s
+  end
 end

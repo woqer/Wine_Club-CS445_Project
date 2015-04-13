@@ -9,9 +9,6 @@ module DB
       @path = File.join(@root, "data", obj)
     end
 
-    def
-    end
-
     def search(param, args)
     end
 

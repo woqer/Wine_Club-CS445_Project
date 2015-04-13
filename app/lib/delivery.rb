@@ -2,13 +2,10 @@
 require 'nokogiri'
 
 class Delivery
-
-  def match_in_array(array, name)
-
-  end
+  attr_reader :check_adult, :day_of_week, :time
 
   def check_illegal_state(name)
-    f = File.open('../data/illegal_states.xml')
+    f = File.open(File.join(File.dirname(__FILE__), "..", "..", "data", "illegal_states.xml"))
     doc = Nokogiri::XML(f)
     f.close
 
@@ -17,15 +14,6 @@ class Delivery
     match = states.select { |s| s.text==name }
 
     return match.length > 0
-  end
-
-  def check_adult
-  end
-
-  def day_of_week
-  end
-
-  def time
   end
 
 end

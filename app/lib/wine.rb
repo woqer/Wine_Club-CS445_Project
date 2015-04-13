@@ -1,8 +1,9 @@
 # encoding: utf-8
 
 class Wine
-  attr_reader :type
-  def initialize(type)
+  attr_reader :type, :name
+  def initialize(name, type)
+    @name = name
     set_type(type)
   end
 
@@ -17,7 +18,7 @@ class Wine
     when "WHITE"
       @type = :white
     else
-      puts "Invalid Wine type! #{type}"
+      raise BadArgError, "Invalid Wine type! #{type}"
     end
   end
 end

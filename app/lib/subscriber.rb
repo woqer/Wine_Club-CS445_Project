@@ -2,7 +2,7 @@
 require 'json'
 require File.join(File.dirname(__FILE__), "person.rb")
 require File.join(File.dirname(__FILE__), "address.rb")
-require File.join(File.dirname(__FILE__), "..", "bad_arg_error.rb")
+require File.join(File.dirname(__FILE__), "bad_arg_error.rb")
 
 class Subscriber < Person
   attr_reader :email, :phone, :address, :fb, :tw
@@ -44,10 +44,10 @@ class Subscriber < Person
     begin
       server = @email.split("@")[1].split(".")
       if server.length < 2
-        raise "Bad user email format !"
+        raise BadArgError, "Bad user email format !"
       end
     rescue
-      raise "Bad user email format !"
+      raise BadArgError, "Bad user email format !"
     end
   end
 end

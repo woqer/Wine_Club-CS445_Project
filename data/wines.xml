@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <wine>
+    <name>Marques de Caceres Verdejo</name>
+    <type>W</type>
+  </wine>
+  <wine>
+    <name>Vega Sicilia Unico</name>
+    <type>R</type>
+  </wine>
+</root>

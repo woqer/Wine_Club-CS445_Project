@@ -8,7 +8,7 @@ class Wine
   end
 
   def set_type(type)
-    case type.up_case
+    case type.upcase
     when "R"
       @type = :red
     when "RED"
@@ -21,4 +21,20 @@ class Wine
       raise BadArgError, "Invalid Wine type! #{type}"
     end
   end
+
+  def self.get_type(type)
+    case type.upcase
+    when "R"
+      :red
+    when "RED"
+      :red
+    when "W"
+      :white
+    when "WHITE"
+      :white
+    else
+      :""
+    end
+  end
+
 end

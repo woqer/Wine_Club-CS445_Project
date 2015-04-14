@@ -37,7 +37,8 @@ class VinClient
   end
 
   def get_wines id
-    url = URI::encode("http://localhost:8080/vin/sub/345/search")
+    url = URI::encode("http://localhost:8080/vin/sub/#{id}/search?q=red")
     response = RestClient.get url.to_s
+    JSON.parse(response)
   end
 end

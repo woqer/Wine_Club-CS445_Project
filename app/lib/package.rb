@@ -1,10 +1,9 @@
 # encoding: utf-8
 
 class Package
-  attr_reader :n_red, :n_white, :note, :price
-  def initialize(red, white, price, note)
-    @red = red
-    @white = white
+  attr_reader :wines, :note, :price
+  def initialize(wines, price, note)
+    @wines = wines
     @price = price
     @note = set_note(note)
   end

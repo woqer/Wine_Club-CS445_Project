@@ -50,4 +50,16 @@ class Subscriber < Person
       raise BadArgError, "Bad user email format !"
     end
   end
+
+  def compare_email_formater(email)
+    email_ary = email.split("@")
+    email_ary[1].delete!(".+")
+    email_ary.join("@")
+  end
+
+  def eql?(obj)
+    me = compare_email_formater(@email)
+    other = compare_email_formater(obj.email)
+    me.eql?(other)
+  end
 end

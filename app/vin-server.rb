@@ -11,6 +11,18 @@ class VinServer
   attr_reader :subscribers
   def initialize
     @subscribers = Array.new
+    @packages = PackageHelper.new
+  end
+
+  def init_packages(index)
+    shipment = Shipment.new(@packages.wines, "WR")
+    wines = shipment.package
+    sub = @subscribers[index]
+    year = Time.now.year.to_i
+    month = "Mar"
+    dow = "Thu"
+    tod = "PM"
+    @packages.add(wines, note="", price=100, sub, year, month, dow, tod)
   end
 
   def parse_sub data
@@ -25,6 +37,7 @@ class VinServer
   def create_sub data
     begin
       id = @subscribers.push(parse_sub(data)).length - 1
+      init_packages(id)
       {
         id: id,
         errors: []
@@ -65,6 +78,21 @@ class VinServer
   def delete_sub id
   end
 
+  def sub_get_ship_by_wine(uid, q)
+    match_indexes = @packages.find(:sub, @subscribers[uid.to_i])
+    wines = @packages.wines_make_ary(match_indexes, q.to_s)
+
+    wids = @packages.find_package_index_with_wines( wines.map { |h| h[:id] })
+
+    notes = @packages.notes_make_ary(match_indexes & wids)
+    shipments = @packages.shipments_make_ary(match_indexes & wids)
+    {
+      wines: wines,
+      notes: notes,
+      shipments: shipments
+    }
+  end
+
 end
 
 
@@ -103,6 +131,7 @@ end
 get '/vin/sub/:uid/search' do
   uid = params[:uid]
   q = params[:q]
+  vin.sub_get_ship_by_wine(uid, q).to_json
 end
 
 get '/vin/sub/:uid/shipments' do
